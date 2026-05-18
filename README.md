@@ -1,10 +1,76 @@
-## README Description
+# MandiSense: AI-Powered Market Intelligence for KR Market
 
-SANTE PRICE INDEX (Mandi Sense) is an AI-powered Android micro-finance application developed to support small-scale vendors in rural and semi-urban markets by providing intelligent, data-driven pricing solutions. The project addresses a major challenge faced by local vendors who often struggle to determine fair and profitable selling prices due to inconsistent access to wholesale market data, fluctuating transportation costs, and limited financial literacy. By integrating daily Mandi price updates, transport expenses, cost-plus pricing models, and Generative AI recommendations, the application calculates accurate Recommended Retail Prices (RRP) that help vendors remain competitive while maximizing profit. The platform also includes features such as profit margin analysis, digital price boards, trend prediction, offline usability, and scalable Firebase cloud integration for real-time data storage and updates. Built using Android Studio, Kotlin, Firebase, and GenAI APIs, this project bridges the information gap between wholesale city markets and local retail sellers. SANTE PRICE INDEX not only simplifies pricing decisions but also promotes financial inclusion, fair trade practices, and economic empowerment for underserved communities. By combining technology with micro-finance principles, the application serves as a socially impactful innovation aimed at improving vendor sustainability, customer trust, and local market efficiency. 
+![MandiSense Header](https://raw.githubusercontent.com/username/repo/main/assets/banner.png)
 
-### Project Created:
+MandiSense is a state-of-the-art Flutter application designed to empower small-scale vendors and farmers in the Bangalore KR Market. By leveraging real-time cloud synchronization and advanced AI insights, MandiSense transforms raw market data into actionable business intelligence.
 
-**SANTE PRICE INDEX (MICRO FINANCE)**
-**Also called: Mandi Sense**
-**Name:** Anusha B N
-**USN:** 1MJ22AI007
+## 🌟 Key Features
+
+- **Real-Time Market Prices**: Live synchronization with a Supabase cloud database for the most accurate KR Market data.
+- **AI Expert Assistant**: A hybrid intelligence engine (Gemini 1.5 Flash + Local Logic) that provides expert advice even in offline conditions.
+- **Digital Slate (Calculation Tool)**: Automate complex profit margin calculations, waste management, and suggested RRP (Recommended Retail Price).
+- **Price Trend Analytics**: Visual indicators of price fluctuations (Rising/Falling) over 24 hours.
+- **Dual-Language Support**: Fully localized in **English** and **Kannada** (ಕನ್ನಡ) for local accessibility.
+- **Offline-First Resilience**: Robust fallback mechanisms ensuring the app works perfectly regardless of connectivity.
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Flutter SDK (v3.19+)
+- Android Studio / VS Code
+- Supabase Account
+- Google AI (Gemini) API Key
+
+### Installation
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/nandan/mandisense.git
+   cd mandisense
+   ```
+
+2. **Environment Configuration**:
+   Create a file at `assets/app.env` with the following variables:
+   ```env
+   GEMINI_API_KEY=your_gemini_key
+   SUPABASE_URL=your_supabase_url
+   SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+3. **Install Dependencies**:
+   ```bash
+   flutter pub get
+   ```
+
+4. **Build Production APK**:
+   ```bash
+   flutter build apk --release --no-tree-shake-icons
+   ```
+
+## 🛠️ Technology Stack
+
+- **Frontend**: Flutter (Dart)
+- **Backend**: Supabase (PostgreSQL, Real-time)
+- **AI Engine**: Google Gemini 1.5 Flash (via REST API)
+- **State Management**: BLoC (Business Logic Component)
+- **Local Persistence**: Flutter Secure Storage & Env-loading
+
+## 📁 Project Structure
+
+```text
+lib/
+├── core/           # Constants, Theme, Config
+├── data/           # Models, Services, Repositories
+├── presentation/   # Screens, BLoCs, Widgets
+├── l10n/           # English & Kannada Translations
+└── main.dart       # Application Entry Point
+```
+
+## 📄 Documentation
+
+For detailed information, please refer to:
+- [Project Guide & Installation](docs/PROJECT_GUIDE.md)
+- [Presentation Guide (Slide-by-Slide)](docs/PRESENTATION_GUIDE.md)
+- [Technical Architecture](docs/TECHNICAL_ARCHITECTURE.md)
+
+---
+© 2026 MandiSense Team. All Rights Reserved.
